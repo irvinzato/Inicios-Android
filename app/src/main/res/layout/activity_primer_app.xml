@@ -7,6 +7,7 @@
     tools:context=".activity.PrimerAppActivity">
 
     <TextView
+        android:id="@+id/textoIrving"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
@@ -16,8 +17,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="Rendirse jamas Irving"
+        tools:ignore="HardcodedText,MissingConstraints"
+    />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botonLoguea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loguea"
+        android:background="@color/purple_200"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/textoIrving"
+        app:layout_constraintEnd_toEndOf="@id/textoIrving"
+        app:layout_constraintStart_toStartOf="@id/textoIrving"
+        tools:ignore="HardcodedText,MissingConstraints"
+    />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextMensaje"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/botonLoguea"
+        app:layout_constraintStart_toStartOf="@+id/botonLoguea"
+        app:layout_constraintEnd_toEndOf="@+id/botonLoguea"
         tools:ignore="MissingConstraints"
     />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMensaje"
+        app:layout_constraintStart_toStartOf="@+id/editTextMensaje"
+        android:text="Escribe mensaje"
+        tools:ignore="HardcodedText,MissingConstraints"
+        />
 
     <View
         android:id="@+id/vistaPurpura"
