@@ -1,6 +1,7 @@
 package com.rivera.iniciosjiraffe.activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,9 @@ class PrimerAppActivity : AppCompatActivity() {
             val editTextLog = editTextMensaje.text.toString()
             if(editTextLog.isNotEmpty()) {
                 Log.i("Irving", "!Rendirse Jamas! $editTextLog")
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_NAME",editTextLog)
+                startActivity(intent)
             }
 
         }
